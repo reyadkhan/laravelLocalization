@@ -1,0 +1,30 @@
+{
+    "name": "webapp/localization",
+    "description": "Simple laravel localization package",
+    "type": "library",
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/support": "^7.17"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebCode\\Localization\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WebCode\\Localization\\LocalizationServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reyad Khan",
+            "email": "reyadk2@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "beta"
+}
