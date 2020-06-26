@@ -6,6 +6,10 @@ It will switch locale according to **url** query or user's language
 * PHP >= 7.2.5
 * Laravel >= 6.0
 #### Installation:
+* Run composer command:
+```
+composer require webapp/localization
+```
 * To publish localization.php config file run the command:
 ```
 php artisan vendor:publish --tag=config

@@ -1,6 +1,6 @@
 <?php
 
-namespace WebCode\Localization\Middlewares;
+namespace WebApp\Localization\Middlewares;
 
 use Closure;
 
