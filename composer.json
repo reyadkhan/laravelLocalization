@@ -8,13 +8,13 @@
     },
     "autoload": {
         "psr-4": {
-            "WebCode\\Localization\\": "src/"
+            "WebApp\\Localization\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "WebCode\\Localization\\LocalizationServiceProvider"
+                "WebApp\\Localization\\LocalizationServiceProvider"
             ]
         }
     },

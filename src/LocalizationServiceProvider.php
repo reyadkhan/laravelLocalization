@@ -5,7 +5,7 @@
  * Entry point of this package
  */
 
-namespace WebCode\Localization;
+namespace WebApp\Localization;
 
 use Illuminate\Support\ServiceProvider;
 use WebCode\Localization\Middlewares\LocalizationMiddleware;
