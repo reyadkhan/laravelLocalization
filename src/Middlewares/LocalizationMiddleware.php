@@ -9,14 +9,13 @@ class LocalizationMiddleware
     public function handle($request, Closure $next)
     {
         $localeConfigs = config('localization');
-        $sessionKey = 'webCodeLocale';
         $requestedLang = strtolower($request->query($localeConfigs['query_var']));
 
         if(in_array($requestedLang, $localeConfigs['available_locales'])) {
-            session([$sessionKey => $requestedLang]);
+            session([$localeConfigs['session_key'] => $requestedLang]);
         }
 
-        if( ! session()->has($sessionKey)) {
+        if( ! session()->has($localeConfigs['session_key'])) {
 
             if( ! empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 
@@ -24,17 +23,17 @@ class LocalizationMiddleware
 
                 if(in_array($userLang, $localeConfigs['available_locales'])) {
 
-                    session([$sessionKey => $userLang]);
+                    session([$localeConfigs['session_key'] => $userLang]);
                 }
             }
 
-            if( ! session()->has($sessionKey)) {
+            if( ! session()->has($localeConfigs['session_key'])) {
 
-                session([$sessionKey => $localeConfigs['fallback_locale'] ?: config('app.fallback_locale')]);
+                session([$localeConfigs['session_key'] => $localeConfigs['fallback_locale'] ?: config('app.fallback_locale')]);
             }
         }
         
-        app()->setLocale(session()->get($sessionKey));
+        app()->setLocale(session()->get($localeConfigs['session_key']));
         return $next($request);
     }
 }
