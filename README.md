@@ -1,6 +1,6 @@
-### Simple localization package for laravel
+### Simple localization package for Laravel
 
-It will switch locale according to **url** query or user's language
+It will switch locale according to **url** parameter or user's language
 
 #### Requirements:
 * PHP >= 7.2.5
@@ -14,7 +14,7 @@ composer require webapp/localization
 ```
 php artisan vendor:publish --tag=config
 ```
-You can edit the config/localization.php file as your need. The `query_var` is the query variable. If you want to set locale english then you can pass lang=en as query string.
+You can edit the config/localization.php file as your need. The `query_var` is the url parameter variable. If you want to set locale in english then you can pass lang=en as the parameter with url.
 
 `Ex: http://localhost:8000?lang=en`<br>
 You can change the query_var. By default it is `lang`.<br>
