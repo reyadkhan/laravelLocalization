@@ -28,4 +28,4 @@ You can edit the `config/localization.php` file as your need. The `query_var` is
 
 `Ex: http://localhost:8000?lang=en`<br>
 You can change the `query_var`. By default it is `lang`.<br>
->It stores user's **locale** in session. So from next request it will take user locale from session. **Session key**(session_key) is also configured under config file. You can change the key if needed.
+>It stores user's **locale** in session. So from next request it will take user locale from session. **Session key**(session_key) is also configured under the config file. You can change the key if needed.
